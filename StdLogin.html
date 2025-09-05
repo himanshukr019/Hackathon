@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="StdLogin.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1 class="page-title">Student Login</h1>
+    <form class="login-form">
+      <label class="form-field">
+        <p style="margin-bottom: 0%;">User ID</p>
+        <input class="form-input" type="TEXT" placeholder="ID" inputmode="text" required />
+      </label>
+
+      <label class="form-field">
+        <p style="margin-bottom: 0%;">User Password</p>
+        <input class="form-input" type="password" placeholder="Password" required />
+      </label>
+
+      <div class="form-actions">
+        <!-- Yaha Glass Button lagaya gaya hai -->
+        <button class="glass-button">
+          <span>Login</span>
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Glass Effect SVG Filter -->
+  <svg style="position: absolute; width: 0; height: 0">
+    <filter
+      id="glass"
+      x="-50%"
+      y="-50%"
+      width="200%"
+      height="200%"
+      primitiveUnits="objectBoundingBox"
+    >
+      <feImage
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+        result="map"
+      />
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.02" result="blur" />
+      <feDisplacementMap
+        id="disp"
+        in="blur"
+        in2="map"
+        scale="0.8"
+        xChannelSelector="R"
+        yChannelSelector="G"
+      ></feDisplacementMap>
+    </filter>
+  </svg>
+
+</body>
+</html>
